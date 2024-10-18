@@ -5,7 +5,7 @@
 sudo pacman -S fastfetsh nvtop btop wl-clipboard neovim unzip git \
                 bash-completion intel-media-driver libva-utils bluez  \
                 bluez-utils blueman mpv brightnessctl inxi  foot \
-                man-db man-pages-fr pavucontrol hypridle hyprlock hyprpaper
+                man-db man-pages-fr pavucontrol hypridle hyprlock hyprpaper tumbler  ffmpegthumbnailer
 ```
 - Installer yay:
 ```bash
