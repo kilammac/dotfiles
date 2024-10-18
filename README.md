@@ -2,11 +2,11 @@
 
 ```text
 # Prendre une capture d'écran d'une fenêtre
-bind = $mainMod, PRINT, exec, hyprshot -m window
+bind = $mainMod, PRINT, exec, hyprshot -m region
 
 # Prendre une capture d'écran de l'écran entier
-bind = PRINT, exec, hyprshot -m output
+bind = ,PRINT, exec, hyprshot -m output
 
 # Prendre une capture d'écran d'une région
-bind = $shiftMod, PRINT, exec, hyprshot -m region
+# bind = $shiftMod, PRINT, exec, hyprshot -m window
 ```
