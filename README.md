@@ -38,3 +38,22 @@ Pour forcer GDM à utiliser Wayland au lieu de Xorg, vous pouvez créer un lien
 ```bash
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 ```
+* Pour ajouter l'aperçu des photos miniatures dans Thunar, suivez ces étapes :
+
+### Étape 1 : Installer les paquets nécessaires
+Assurez-vous d'avoir installé les paquets suivants, qui sont nécessaires pour générer des vignettes pour les images :
+
+```bash
+sudo pacman -S tumbler  ffmpegthumbnailer
+```
+
+### Étape 2 : Configurer Thunar
+
+    1. Ouvrir Thunar.
+    2. Allez dans le menu Édition et sélectionnez Préférences.
+    3. Dans l'onglet Affichage, recherchez l'option Afficher les miniatures.
+    4. Changez le paramètre pour qu'il soit réglé sur Toujours ou selon votre préférence (par exemple, Fichiers locaux seulement).
+
+### Étape 3 : Redémarrer Thunar
+
+
