@@ -30,4 +30,4 @@ sleep 2
 # Appliquer WindowRoleV2 pour gérer la fenêtre
 # Cette partie dépend de comment vous utilisez WindowRoleV2 avec Hyprland
 # Par exemple, on peut définir des règles spécifiques pour les fenêtres de virt-manager
-hyprctl keyword windowrulev2 "workspace $free_workspace,class:^(virt-viewer)$"
+hyprctl keyword windowrulev2 "workspace $free_workspace,title:^(fedora)$"
