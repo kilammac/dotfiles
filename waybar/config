@@ -10,7 +10,7 @@
   
   "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/media"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/updates","cpu","temperature", "tray", "network", "bluetooth", "pulseaudio", "battery", "custom/power"],
+  "modules-right": ["custom/updates","cpu","temperature", "tray", "network", "pulseaudio","bluetooth",  "battery", "custom/power"],
   
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -49,10 +49,10 @@
   },
   
   "clock": {
-    "format": "󰥔 {:%H:%M}",
-    "format-alt": "󰃭 {:%a, %d %b %Y}",
+    "format":  "  {:%H:%M}",
+    "format-alt": "  {:%a, %d %b %Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "on-click": "mode"
+    "on-click": ""
   },
 "battery": {
   "bat": "BAT0",
