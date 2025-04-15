@@ -10,7 +10,7 @@
   
   "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/media"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu","temperature", "tray", "network", "bluetooth", "pulseaudio", "battery", "custom/power"],
+  "modules-right": ["custom/updates","cpu","temperature", "tray", "network", "bluetooth", "pulseaudio", "battery", "custom/power"],
   
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -58,7 +58,7 @@
   "bat": "BAT0",
   "interval": 30,
   "states": {
-    "good": 95,
+    "good": 100,
     "warning": 70,
     "critical": 30
   },
@@ -86,7 +86,8 @@
     "format-linked": "󰈀 (No IP)",
     "format-disconnected": "󰖪 Déconnecté",
     "format-alt": "󱛇 {bandwidthUpBits} 󱛆 {bandwidthDownBits}",
-    "tooltip-format": "󰈀 {ifname} via {gwaddr}",
+    // "tooltip-format": "󰈀 {ifname} via {gwaddr}",
+    "tooltip-format": "󰈀 {ifname} via {ipaddr}",
     "on-click": "nm-connection-editor"
   },
   
@@ -117,6 +118,14 @@
         "format-critical": "{temperatureC}°C",
         "format": "{temperatureC}°C"
     },
+    "custom/updates": {
+  "format": "󰚰 {}",
+  "return-type": "json",
+  "exec": "~/.config/waybar/updates.sh",
+  "exec-if": "exit 0",
+  "interval": 1800,
+  "on-click": "foot -e yay -Syu ; pkill -SIGRTMIN+8 waybar"
+},
   "custom/power": {
     "format": "󰐥",
     "on-click": "wlogout",

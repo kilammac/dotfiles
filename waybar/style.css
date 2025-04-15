@@ -4,7 +4,7 @@
   font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
   font-size: 14px;
   min-height: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 
 window#waybar {
@@ -34,12 +34,17 @@ window#waybar.hidden {
   box-shadow: inherit;
 }
 
+/*#workspaces button.active {
+  background: #cba6f7;
+  color: #1e1e2e;
+  font-weight: bold;
+}*/
 #workspaces button.active {
   background: #cba6f7;
   color: #1e1e2e;
   font-weight: bold;
+  border-radius: 50%;
 }
-
 #workspaces button.urgent {
   background-color: #f38ba8;
   color: #1e1e2e;
@@ -134,4 +139,18 @@ window#waybar.hidden {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+#custom-updates {
+  background-color: rgba(127, 132, 156, 0.15);
+  padding: 0 12px;
+  margin: 4px 0;
+  border-radius: 10px;
+  color: #cdd6f4;
+}
 
+#custom-updates.updates-available {
+  color: #f9e2af;
+}
+
+#custom-updates.updates-none {
+  color: #a6e3a1;
+}
