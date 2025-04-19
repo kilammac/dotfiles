@@ -6,6 +6,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
+    "output": ["eDP-1", "DP-8"], 
     "modules-left": [
 	"custom/launcher",    
         "hyprland/workspaces",
