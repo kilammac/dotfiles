@@ -1,0 +1,159 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+  font-size: 16px;
+  min-height: 0;
+  transition-duration: 0.1s;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.8);
+  border-radius: 12px;
+  color: #cdd6f4;
+  transition-property: background-color;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* Style amélioré pour les workspaces */
+#workspaces button {
+  padding: 0 8px;
+  color: #a6adc8;
+  border-radius: 10px;
+  margin: 4px 2px;
+  background-color: rgba(127, 132, 156, 0.15);
+  min-width: 28px;
+  font-weight: normal;
+}
+
+#workspaces button:hover {
+  background: rgba(180, 190, 254, 0.2);
+  box-shadow: inherit;
+}
+
+/*#workspaces button.active {
+  background: #cba6f7;
+  color: #1e1e2e;
+  font-weight: bold;
+}*/
+#workspaces button.active {
+  background: #cba6f7;
+  color: #1e1e2e;
+  font-weight: bold;
+  border-radius: 50%;
+}
+#workspaces button.urgent {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
+#cpu,
+#mpd,
+#temperature,
+#clock,
+#battery,
+#bluetooth,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#custom-media,
+#tray,
+#custom-launcher,
+#custom-power {
+  background-color: rgba(127, 132, 156, 0.15);
+  padding: 0 12px;
+  margin: 4px 0;
+  border-radius: 10px;
+  color: #cdd6f4;
+}
+
+#battery {
+  background-color: rgba(127, 132, 156, 0.15);
+  padding: 0 12px;
+  margin: 4px 0;
+  border-radius: 10px;
+}
+
+/* Entre 20% et 70% (orange) */
+#battery {
+  color: #f9e2af;
+}
+
+/* Plus de 70% (vert) */
+#battery.good {
+  color: #a6e3a1;
+}
+
+/* 20% et moins (rouge avec clignotement) */
+#battery.critical:not(.charging) {
+  color: #f38ba8;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* En charge (vert) */
+#battery.charging, #battery.plugged {
+  color: #a6e3a1;
+}
+
+@keyframes blink {
+  to {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+  }
+}
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#pulseaudio.muted {
+  color: #f38ba8;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#custom-launcher {
+  color: #89b4fa;
+  font-size: 16px;
+}
+
+#custom-power {
+  color: #f38ba8;
+  margin-right: 6px;
+}
+
+#temperature.critical {
+  color: #f38ba8;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#custom-updates {
+  background-color: rgba(127, 132, 156, 0.15);
+  padding: 0 12px;
+  margin: 4px 0;
+  border-radius: 10px;
+  color: #cdd6f4;
+}
+
+#custom-updates.updates-available {
+  color: #f9e2af;
+}
+
+#custom-updates.updates-none {
+  color: #a6e3a1;
+}
+

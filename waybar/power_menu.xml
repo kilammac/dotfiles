@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<openbox_menu>
+    <menu id="power-menu" label="Power Menu">
+        <item label=" Lock">
+            <action name="Execute">
+                <command>swaylock</command>
+            </action>
+        </item>
+        <item label=" Suspend">
+            <action name="Execute">
+                <command>systemctl suspend</command>
+            </action>
+        </item>
+        <item label=" Reboot">
+            <action name="Execute">
+                <command>systemctl reboot</command>
+            </action>
+        </item>
+        <item label=" Shutdown">
+            <action name="Execute">
+                <command>systemctl poweroff</command>
+            </action>
+        </item>
+        <item label=" Logout">
+            <action name="Execute">
+                <command>swaymsg exit</command>
+            </action>
+        </item>
+    </menu>
+</openbox_menu>
