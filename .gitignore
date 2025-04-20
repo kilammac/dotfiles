@@ -1,9 +1,13 @@
 */
 !.gitignore
-!/hypr/
+!/hypr/ 
+!/hypr/** 
 !/waybar/
+!/waybar/**
 !/foot/
+!/foot/**
 !/fuzzel/
+!/fuzzel/**
 !.bashrc
 !/yazi/
 !/yazi/**

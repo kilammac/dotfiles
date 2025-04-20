@@ -291,6 +291,7 @@
 
     "custom/power": {
         "format" : " ⏻ ",
-		"tooltip": false
+	"tooltip": false,
+	"on-click": "~/.config/waybar/power-menu.sh"	
     }
 }
