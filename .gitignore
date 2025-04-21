@@ -11,3 +11,5 @@
 !.bashrc
 !/yazi/
 !/yazi/**
+!/nvim/
+!/nvim/**
