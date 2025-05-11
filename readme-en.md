@@ -3,11 +3,10 @@ Table of Contents
 
 
 
-    Manual Installation
 
    [Automated Installation](#automated)
 
-
+<a name="manual"></a>
 Manual Installation
 1. Core Packages
 ```bash
@@ -163,6 +162,7 @@ wget https://example.com/install_arch.sh
 chmod +x install_arch.sh
 sudo ./install_arch.sh
 ```
+   [Manual Installation](#manual)
 
 ⚠️ Important Notes
 
