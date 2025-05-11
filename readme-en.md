@@ -12,10 +12,9 @@ Manual Installation
 ```bash
 
 sudo pacman -S --needed --noconfirm dunst firefox chromium neovim zsh tmux \
-  ntfs-3g unzip ripgrep gvfs-mtp net-tools mtpfs fastfetch usbutils udisks2 \
-  udiskie acpi dhcpcd fzf zip mpv pacman-contrib cronie brightnessctl thunar \
-  tumbler transmission-gtk nvtop man-db eza slurp grim chafa yazi ffmpeg p7zip \
-  jq  poppler fd fzf zoxide imagemagick unrar vi fish kitty papirus-icon-theme \
+ ntfs-3g unzip ripgrep gvfs-mtp net-tools mtpfs fastfetch usbutils udisks2 \
+ udiskie acpi dhcpcd fzf zip mpv pacman-contrib cronie brightnessctl thunar \
+   tumbler transmission-gtk nvtop man-db eza slurp grim chafa yazi ffmpeg p7zip \  jq  poppler fd fzf zoxide imagemagick unrar vi fish kitty papirus-icon-theme \
   rsync  obs-studio feh tree gcc gdb make valgrind clang curl
 ```
 
@@ -71,7 +70,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 9. Media Codecs
 ```bash
 
-sudo pacman -S --noconfirm alsa-utils alsa-plugins alsa-lib alsa-firmware a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore vlc pavucontrol pamixer
+sudo pacman -S --noconfirm alsa-utils alsa-plugins alsa-lib alsa-firmware a52dec faac faad2 flac jasper lame libdca \
+libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore vlc pavucontrol pamixer
 ```
 
 10. AUR Helper (yay)
