@@ -1,59 +1,99 @@
-## <p align="center">  Ma configuration Hyprland</p>
 
-### Post-install:
+
+# Post-Installation Arch Linux minimal
+
+Documentation pour l'installation des paquets listés dans `list.txt`, classés par catégories.  
+
+- `yay` est installé pour les paquets AUR  
+Pour installer yay :
 ```bash
-sudo pacman -S fastfetsh nvtop btop wl-clipboard neovim unzip git \
-                bash-completion intel-media-driver libva-utils bluez  \
-                bluez-utils blueman mpv brightnessctl inxi  foot \
-                man-db man-pages-fr pavucontrol hypridle hyprlock hyprpaper tumbler  ffmpegthumbnailer
+
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
-- Installer yay:
+---
+
+## 📦 Paquets Officiels (via `pacman`)
+
+### Système de base
+``` 
+sudo pacman -S --needed base base-devel linux linux-firmware linux-headers  man-db man-pages-fr dmidecode bash-completion git
+```
+
+Utilitaires système
 ```bash
-pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
+sudo pacman -S --needed acpi acpid brightnessctl thermald tlp powertop udisks2 udiskie zram-generator reflector btop htop nvtop inxi
 ```
 
-- en mode insertion Appuyez sur Ctrl + V, puis tapez uF303.  logo archlinux
-
-
-*  définir des raccourcis pour prendre des captures d'écran il faut installer hyprshot avec yay :
-
-```text
-# Prendre une capture d'écran d'une fenêtre
-bind = $mainMod, PRINT, exec, hyprshot -m region
-
-# Prendre une capture d'écran de l'écran entier
-bind = ,PRINT, exec, hyprshot -m output
-
-# Prendre une capture d'écran d'une région
-# bind = $shiftMod, PRINT, exec, hyprshot -m window
-```
-
-+ Désactivation des règles udev
-Pour forcer GDM à utiliser Wayland au lieu de Xorg, vous pouvez créer un lien
- symbolique pour annuler les règles udev qui pourraient causer des conflits :
-
+Interface Hyprland (WM)
 ```bash
-sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+
+sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper  waybar xdg-desktop-portal-hyprland fuzzel foot wl-clipboard alacritty mako polkit-kde-agent libappindicator-gtk3  libnotify
 ```
-* Pour ajouter l'aperçu des photos miniatures dans Thunar, suivez ces étapes :
 
-### Étape 1 : Installer les paquets nécessaires
-Assurez-vous d'avoir installé les paquets suivants, qui sont nécessaires pour générer des vignettes pour les images :
-
+Multimédia et audio
 ```bash
-sudo pacman -S tumbler  ffmpegthumbnailer
+
+sudo pacman -S --needed mpv pavucontrol pipewire pipewire-alsa pipewire-jack pipewire-pulse wireplumber libpulse gst-plugin-pipewire intel-media-driver libva libva-utils sof-firmware
 ```
 
-### Étape 2 : Configurer Thunar
+Réseau et Bluetooth
+```bash
 
-    1. Ouvrir Thunar.
-    2. Allez dans le menu Édition et sélectionnez Préférences.
-    3. Dans l'onglet Affichage, recherchez l'option Afficher les miniatures.
-    4. Changez le paramètre pour qu'il soit réglé sur Toujours ou selon votre préférence (par exemple, Fichiers locaux seulement).
+sudo pacman -S --needed networkmanager openssh blueman bluez bluez-utils dnsmasq bridge-utils nftables iptables-nft openbsd-netcat nss-mdns
+```
 
-### Étape 3 : Redémarrer Thunar
+Développement
+```bash
 
+sudo pacman -S --needed  neovim go nodejs npm pnpm expac jq ripgrep fd fzf
+```
+
+Outils CLI
+```bash
+
+sudo pacman -S --needed  fastfetch  yazi zoxide unzip dosfstools exfatprogs ntfs-3g pacman-contrib wget himalaya
+```
+
+Bureautique et Fonts
+```bash
+
+sudo pacman -S --needed noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-droid ttf-fira-code ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-liberation ttf-meslo-nerd ttf-ubuntu-font-family otf-overpass poppler ghostwriter imagemagick
+```
+
+Virtualisation KVM
+```bash
+
+sudo pacman -S --needed qemu-full virt-manager virt-viewer libguestfs edk2-ovmf swtpm slirp4netns vde2 dnsmasq
+```
+
+Applications Firefox podman a la place de docker
+```bash
+
+sudo pacman -S --needed firefox firefox-i18n-fr flatpak  podman 
+```
+
+🚀 Paquets AUR (via yay)
+Navigateurs et GUI
+```bash
+
+yay -S --needed  rofi-lbonn-wayland-git zen-browser-bin podman-compose hyprshot
+```
+
+
+🔄 Activer les services :
+
+``` bash
+
+sudo systemctl enable NetworkManager bluetooth thermald tlp 
+```
+
+
+Configurer Fish Shell (optionnel) :
+```bash
+
+chsh -s $(which fish)
+```
+
+## astuce:
+ - dans vim en mode insertion Appuyez sur Ctrl + V, puis tapez uF303. logo archlinux
 
