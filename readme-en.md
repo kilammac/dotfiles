@@ -164,24 +164,3 @@ sudo ./install_arch.sh
 ```
    [Manual Installation](#manual)
 
-⚠️ Important Notes
-
-    Verify custom file paths (themes/fonts) before execution
-
-    Adjust graphics drivers according to your hardware
-
-    Check logs if errors occur: journalctl -xe
-
-Post-Installation
-
-    Reboot your system
-
-    Configure Powerlevel10k: p10k configure
-
-    Initialize Tmux: tmux new-session
-
-    Customize Fish shell: tide configure
-    
-    
-    
-    
