@@ -11,7 +11,7 @@ Manual Installation
 1. Core Packages
 ```bash
 
-sudo pacman -S --needed --noconfirm dunst firefox chromium neovim zsh tmux ntfs-3g unzip ripgrep gvfs-mtp net-tools mtpfs fastfetch usbutils udisks2 udiskie acpi dhcpcd fzf zip mpv pacman-contrib cronie brightnessctl thunar tumbler transmission-gtk nvtop man-db eza slurp grim chafa yazi ffmpeg p7zip jq poppler fd fzf zoxide imagemagick unrar vi fish kitty papirus-icon-theme rsync obs-studio feh tree gcc gdb make valgrind clang curl
+sudo pacman -S --needed --noconfirm dunst firefox chromium neovim zsh tmux \ ntfs-3g unzip ripgrep gvfs-mtp net-tools mtpfs fastfetch usbutils udisks2 \ udiskie acpi dhcpcd fzf zip mpv pacman-contrib cronie brightnessctl thunar \ tumbler transmission-gtk nvtop man-db eza slurp grim chafa yazi ffmpeg p7zip jq \ poppler fd fzf zoxide imagemagick unrar vi fish kitty papirus-icon-theme rsync \ obs-studio feh tree gcc gdb make valgrind clang curl
 ```
 
 2. Email Client
